@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilo.css">
+  <title>Teste Slider</title>
+</head>
+<body>
+  <div class="slider">
+    <div class="container">
+      <div class="item" style="background-image: url('https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336378_960_720.jpg')"></div>
+      <div class="item" style="background-image: url('https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg')"></div>
+      <div class="item" style="background-image: url('https://cdn.pixabay.com/photo/2015/01/08/18/24/children-593313_960_720.jpg')"></div>
+      <div class="item" style="background-image: url('https://i.zst.com.br/images/qual-a-quantidade-de-memoria-ram-e-ideal-para-o-seu-pc--photo23182392-44-22-2b.jpg')"></div>
+      <div class="item" style="background-image: url('http://www.capacitacaoead.com.br/blog/wp-content/uploads/2013/09/Curso-Online-de-Informatica-Basica-oferece-certificado.jpg')"></div>
+    </div>
+    <div class="controles">
+      <a href="#" class="left"><</a>
+      <a href="#" class="right">></a>
+    </div>
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+  <script>
+    $(".right").click(function(){
+      $(".item:first-child").detach().appendTo('.container');
+    });
+
+    $(".left").click(function(){
+      $(".item:last-child").detach().prependTo('.container');
+    });
+  </script>
+
+</body>
+</html>
